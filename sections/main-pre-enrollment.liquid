@@ -1,0 +1,32 @@
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h2 id="preenroll-orderid">Order Id:</h2>
+  <div class="rte">
+    {{ page.content }}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+  #preenroll-orderid{display:none;}
+{% endstylesheet %}
+
+{% javascript %}  
+
+$(document).ready(function () {
+   
+   setTimeout(function(){
+      console.log(localStorage.getItem("preenroll-orderid"));
+     console.log(localStorage.getItem("customer-name"));
+     console.log(localStorage.getItem("product"));
+      $("#17777-text").val(localStorage.getItem("customer-name"));
+      $("#17777-email").val(localStorage.getItem("customer-email"));
+      $("#17777-text-1").val("Order Id:"+localStorage.getItem("preenroll-orderid")+"/"+localStorage.getItem("product"));
+  }, 2000);
+  
+});
+{% endjavascript %}

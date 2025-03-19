@@ -2994,5 +2994,5 @@ details-disclosure > details {
   }
 }
 span.h2{
-color: yellow;
+color: yellow !important;
 }
